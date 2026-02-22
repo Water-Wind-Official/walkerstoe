@@ -35,7 +35,7 @@ html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helv
 .tagline{color:var(--muted);margin-top:0}
 
 .shimmer-divider{display:inline-block;margin:22px 0;padding:18px 28px;border-radius:14px;font-weight:700;color:#dff8ff;position:relative;overflow:hidden;box-shadow:0 6px 28px rgba(15,20,40,0.6)}
-.shimmer-divider::before{content:'';position:absolute;inset:0;z-index:0;filter:blur(20px);opacity:0.9;background:linear-gradient(90deg, rgba(30,60,255,0.14), rgba(93,230,255,0.22), rgba(40,180,255,0.08));}
+.shimmer-divider::before{content:'';position:absolute;inset:0;z-index:0;filter:blur(22px);opacity:0.98;background:linear-gradient(90deg, rgba(6,12,30,0.92), rgba(10,30,60,0.86), rgba(6,12,30,0.92));}
 .shimmer-divider::after{content:'';position:absolute;left:-40%;top:0;bottom:0;width:60%;transform:skewX(-12deg);background:linear-gradient(90deg,transparent,rgba(180,240,255,0.8),transparent);animation:shimmer 2.6s linear infinite;mix-blend-mode:screen;opacity:0.95}
 .shimmer-divider{position:relative;z-index:1}
 @keyframes shimmer{0%{left:-60%}100%{left:120%}}
@@ -68,4 +68,13 @@ html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helv
 .theory-rendered p{color:#dff8ff;margin:8px 0;line-height:1.6}
 .theory-rendered p:first-of-type{margin-top:6px}
 .theory-rendered hr{border:0;height:1px;background:linear-gradient(90deg,transparent,rgba(89,240,255,0.06),transparent);margin:12px 0}
+
+/* Core variables layout */
+.core-vars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
+.core-var{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+.core-var h4{margin:0 0 6px;color:#bffaff;font-weight:700}
+.core-var p{margin:0;color:var(--muted);line-height:1.45}
+
+@media (max-width:900px){.core-vars{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){.core-vars{grid-template-columns:1fr}}
 
