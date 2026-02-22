@@ -63,3 +63,9 @@ html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helv
 .theory-pre, .theory-excerpt{white-space:pre-wrap;font-family:inherit;font-size:15px;line-height:1.5;color:#eafcff;background:transparent;border-radius:8px;padding:8px}
 .theory-excerpt{opacity:0.9;border-left:2px solid rgba(89,240,255,0.12);margin-top:12px}
 
+.theory-controls{margin-top:10px}
+.theory-rendered h3{color:#cfffff;margin:18px 0 8px}
+.theory-rendered p{color:#dff8ff;margin:8px 0;line-height:1.6}
+.theory-rendered p:first-of-type{margin-top:6px}
+.theory-rendered hr{border:0;height:1px;background:linear-gradient(90deg,transparent,rgba(89,240,255,0.06),transparent);margin:12px 0}
+
