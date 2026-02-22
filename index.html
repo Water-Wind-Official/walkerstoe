@@ -1,5 +1,34 @@
 <!doctype html>
 <html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Walker's TOE — Walker's Theory of Everything</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="canvas-bg" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">Walker's <span class="accent">TOE</span></div>
+      <nav class="site-nav">
+        <a href="index.html" class="active">Theory</a>
+        <a href="breakdown.html">Break-Down</a>
+        <a href="quickref.html">Quick Reference</a>
+        <a href="https://gimoire.com" target="_blank" rel="noopener noreferrer">Gimoire</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main">
+    <section class="hero">
+      <h1 class="title">Walker's Theory of Everything</h1>
+      <p class="tagline">Physics, Consciousness, and Meaning</p>
+
+      <div class="shimmer-divider">Walker's TOE</div>
+
       <div class="card">
         <h2>Abstract</h2>
 
@@ -91,116 +120,17 @@
 
         <p>We are not separate beings trying to reach a higher state; we are a single, higher-dimensional awareness extending "rays" into this lower octave to experience life through billions of unique points of view. To return to Source is not a journey outward into the stars, but a journey inward to the core of the fractal.</p>
       </div>
-Level 2: The Silent Observer (The Self)
-If the eye is a lens, who is looking through it? Behind your thoughts, your name, and your physical sensations, there is a "Knower" that cannot be quantified.
-
-You can observe your hand; therefore, you are not your hand.
-
-You can observe your thoughts; therefore, you are not your thoughts.
-
-The "Self" is the localized focus of the One Energy. Even if a scientist were to extract data from a brain, they are merely accessing the hard drive; they have not captured the User who once operated it.
-
-Level 3: The Prism Effect (Individualization)
-We feel separate because of the Prism Effect. We are all channeling the same "Light" of the One Energy through different physical hardware.
-
-If you place a red filter over a white light, the room turns red.
-
-If you use a blue filter, it turns blue.
-
-Our personalities, genetics, and life histories are the "filters." We are unique not because our source is different, but because our "lenses" are uniquely configured. Individual awareness is a universal power channeled through a specific physical frequency.
-
-Level 4: The Source (The Fractal of Unity)
-If you trace the ray of your awareness inward—past thoughts, past body, and past the three-dimensional "room" of the ego,you find the Source. This is the Fractal of Unity.
-
-We are not separate beings trying to reach a higher state; we are a single, higher-dimensional awareness extending "rays" into this lower octave to experience life through billions of unique points of view. To return to Source is not a journey outward into the stars, but a journey inward to the core of the fractal.</pre>
-        
-          <div class="theory-controls">
-            <button id="toggleView" class="btn ghost">Show readable view</button>
-          </div>
-
-          <div class="theory-rendered" aria-hidden="true"></div>
-        </div>
-        <div class="cta-row">
-          <a class="btn" href="breakdown.html">Read Break-Down</a>
-          <a class="btn ghost" href="https://gimoire.com" target="_blank" rel="noopener noreferrer">Visit Forums</a>
-        </div>
-      </div>
     </section>
 
     <section class="notes">
       <h3>THREE CORE VARIABLES</h3>
       <ul>
-        <li>Frequency (f)The speed of vibration.Your Mood/Vibration.</li>
-        <li>Scale (s)The depth of the fractal fold.Your Perspective (Atom vs. Galaxy).</li>
-        <li>Phase ($\phi$)Alignment across the field.Your Connection (Space and Time).</li>
+        <li>Frequency (f) — The speed of vibration. Your Mood/Vibration.</li>
+        <li>Scale (s) — The depth of the fractal fold. Your Perspective (Atom vs. Galaxy).</li>
+        <li>Phase ($\phi$) — Alignment across the field. Your Connection (Space and Time).</li>
       </ul>
     </section>
   </main>
 
-  
-  <script>
-    // Presentation-only formatter: does NOT modify the source pre text.
-    (function(){
-      const pre = document.querySelector('.theory-pre');
-      const excerpt = document.querySelector('.theory-excerpt');
-      const rendered = document.querySelector('.theory-rendered');
-      const toggle = document.getElementById('toggleView');
-      function splitIntoSentences(text){
-        return text.split(/(?<=[.?!])\s+(?=[A-Z0-9\(\"\'’])/);
-      }
-      function renderBlock(text){
-        const sentences = splitIntoSentences(text);
-        const frag = document.createDocumentFragment();
-        let para = [];
-        sentences.forEach((s,i)=>{
-          const headingMatch = s.match(/^([IVX]{1,4}\.)\s*([A-Z\-\s]{3,})/);
-          if(headingMatch){
-            if(para.length){
-              const p = document.createElement('p'); p.textContent = para.join(' '); frag.appendChild(p); para = [];
-            }
-            const h = document.createElement('h3'); h.textContent = headingMatch[0].trim(); frag.appendChild(h);
-            const rest = s.slice(headingMatch[0].length).trim();
-            if(rest) para.push(rest);
-            return;
-          }
-          para.push(s.trim());
-          if(para.length >= 3){
-            const p = document.createElement('p'); p.textContent = para.join(' '); frag.appendChild(p); para = [];
-          }
-        });
-        if(para.length){ const p=document.createElement('p'); p.textContent = para.join(' '); frag.appendChild(p); }
-        return frag;
-      }
-
-      function updateRendered(){
-        rendered.innerHTML = '';
-        if(pre) rendered.appendChild(renderBlock(pre.textContent));
-        if(excerpt){ const hr=document.createElement('hr'); hr.style.opacity='0.06'; hr.style.margin='12px 0'; rendered.appendChild(hr); rendered.appendChild(renderBlock(excerpt.textContent)); }
-      }
-
-      // Initial state: show raw pre but allow toggling to readable view
-      let readable = false;
-      toggle.addEventListener('click', ()=>{
-        readable = !readable;
-        if(readable){
-          pre.style.display = 'none';
-          excerpt.style.display = 'none';
-          rendered.style.display = 'block';
-          rendered.setAttribute('aria-hidden','false');
-          toggle.textContent = 'Show raw source';
-          updateRendered();
-        } else {
-          pre.style.display = '';
-          excerpt.style.display = '';
-          rendered.style.display = 'none';
-          rendered.setAttribute('aria-hidden','true');
-          toggle.textContent = 'Show readable view';
-        }
-      });
-
-      // keep rendered hidden until user toggles; make raw easier to read by wrapping
-      rendered.style.display = 'none';
-    })();
-  </script>
 </body>
 </html>
