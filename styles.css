@@ -56,3 +56,10 @@ html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helv
 .site-footer{padding:12px 0;border-top:1px solid rgba(255,255,255,0.02);color:var(--muted);text-align:center}
 
 @media (max-width:700px){.container{padding:18px}.title{font-size:30px}.notes ul{columns:1}}
+
+/* Styling for preformatted theory content (preserves exact text)
+  This does not modify your theory text — it only changes presentation. */
+.theory-block{margin-top:12px}
+.theory-pre, .theory-excerpt{white-space:pre-wrap;font-family:inherit;font-size:15px;line-height:1.5;color:#eafcff;background:transparent;border-radius:8px;padding:8px}
+.theory-excerpt{opacity:0.9;border-left:2px solid rgba(89,240,255,0.12);margin-top:12px}
+
