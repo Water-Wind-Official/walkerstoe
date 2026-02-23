@@ -89,4 +89,12 @@ html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helv
 
 @media (max-width:1000px){.split{grid-template-columns:1fr}} 
 
+/* Per-section two-column rows for aligned breakdown */
+.section-row{display:grid;grid-template-columns:2fr 1fr;gap:26px;align-items:start;margin:22px 0;padding:12px 0}
+.panel-left{padding-right:8px}
+.panel-right{padding-left:8px}
+.panel-right .placeholder{color:var(--muted)}
+@media (max-width:1000px){.section-row{grid-template-columns:1fr}}
+
+
 
