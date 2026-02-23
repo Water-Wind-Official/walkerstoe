@@ -81,4 +81,12 @@ html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helv
 /* Equation styling (improves display of the Master Equation) */
 .equation{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(180deg,rgba(0,8,18,0.6),rgba(0,6,12,0.6));color:#bffaff;font-weight:700;font-size:20px;margin:10px 0}
 
+/* Two-column breakdown layout */
+.split{display:grid;grid-template-columns:2fr 1.2fr;gap:28px;align-items:start;margin-top:18px}
+.panel{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:20px;border-radius:12px}
+.panel-right .placeholder{color:var(--muted);line-height:1.6}
+.panel-right .section-break{height:1px;background:linear-gradient(90deg,transparent,rgba(89,240,255,0.04),transparent);margin:18px 0}
+
+@media (max-width:1000px){.split{grid-template-columns:1fr}} 
+
 
