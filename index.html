@@ -7,15 +7,13 @@
   <link rel="stylesheet" href="styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* Additional inline styles for enhanced readability in teaching mode */
-    .theory-block p { margin: 1.2em 0; }
-    .theorem { background: rgba(89,240,255,0.05); border-left: 4px solid var(--accent); padding: 1em 1.5em; margin: 1.5em 0; border-radius: 0 8px 8px 0; }
-    .theorem strong { color: var(--accent); }
+    .theorem { background: rgba(89,240,255,0.05); border-left: 4px solid #59f0ff; padding: 1em 1.5em; margin: 1.5em 0; border-radius: 0 8px 8px 0; }
+    .theorem strong { color: #59f0ff; }
     .example { background: rgba(255,255,255,0.02); padding: 1em 1.5em; border-radius: 8px; margin: 1.5em 0; }
-    .example::before { content: "➤ "; color: var(--accent); font-weight: bold; }
-    .equation { font-size: 1.3rem; }
-    .core-vars { margin: 2em 0; }
-    .footnote { font-size: 0.9rem; opacity: 0.7; margin-top: 2em; }
+    .example::before { content: "➤ "; color: #59f0ff; font-weight: bold; }
+    .equation { font-size: 1.3rem; background: rgba(0,0,0,0.3); display: inline-block; padding: 0.5em 1em; border-radius: 8px; margin: 0.5em 0; }
+    .derivation-tree { font-family: monospace; line-height: 2; background: rgba(0,0,0,0.2); padding: 1.5em; border-radius: 12px; }
+    .derivation-tree div { margin-left: 1.5em; }
   </style>
 </head>
 <body>
@@ -34,170 +32,183 @@
   </header>
 
   <main class="container main">
-    <!-- HERO SECTION – INTRODUCTION -->
+    <!-- Introduction -->
     <section class="hero">
       <h1 class="title">Walker's Theory of Everything</h1>
-      <p class="tagline">A complete, self‑consistent account of physics, consciousness, and meaning, derived from a single axiom.</p>
+      <p class="tagline">A complete derivation of physics, consciousness, and meaning from a single axiom: Awareness exists.</p>
     </section>
 
-    <!-- ===================================================================== -->
-    <!-- PART I: THE FOUNDATION – THE SINGLE AXIOM                            -->
-    <!-- ===================================================================== -->
+    <!-- ======================= PART I: THE AXIOM ======================= -->
     <section class="card">
       <h2>Part I: The Single Axiom – Awareness Exists</h2>
-      <div class="theory-block">
-        <p>Every physical theory must start somewhere. Traditionally, physics begins with a stage: space, time, and a collection of particles or fields. But those are arbitrary assumptions. Here we start with only one undeniable fact: <strong>Awareness exists</strong>.</p>
-        <p>This is not the awareness <em>of</em> something, nor the property of a brain. It is the fundamental substance – the raw fact that there is experience, that there is "is‑ness". We call this primordial reality <strong>The One</strong>.</p>
-        <div class="theorem">
-          <strong>Axiom 1 (The Plenum):</strong> There exists a continuous field <em>Ψ</em> such that <em>Ψ(x,y,z,t) > 0</em> for all coordinates. This field is Awareness itself. It has no gaps, no voids, no outside. It is infinite and indivisible.
-        </div>
-        <p>The condition Ψ > 0 everywhere is crucial. It means there is no empty space – only regions where Ψ is in different states of self‑relation. What we call "empty space" is simply the field at its baseline equilibrium, still fully present but not intensely folded.</p>
-        <div class="example">
-          Think of an infinite, still ocean. Even when calm, it is still water. So too, the "vacuum" is still Awareness, never absent.
-        </div>
+      <p>Every theory must start somewhere. Here we start with only one undeniable fact: <strong>Awareness exists</strong>. Not awareness <em>of</em> something, not as a property of matter, but as the fundamental substance of reality. It is all that has ever existed; there is no void, no empty space, no external container.</p>
+      <p>We represent this primordial Awareness as a continuous field <strong>Ψ</strong> defined at every point of an infinite dimensional manifold. Because there are no gaps, the field is everywhere non‑zero:</p>
+      <div class="equation">Ψ(<strong>x</strong>) > 0 &nbsp; ∀ <strong>x</strong></div>
+      <p>To allow for internal self‑relation, we write Ψ as a complex field: <strong>Ψ = R e<sup>iφ</sup></strong> with R > 0. Here R is the “density” of Awareness, and φ is a phase that records the history of self‑relation. This is the only assumption.</p>
+      <div class="theorem">
+        <strong>Axiom (The Plenum):</strong> There exists a continuous, complex field Ψ such that |Ψ| > 0 everywhere. This field is Awareness itself. It has no exterior, no gaps, and nothing else.
       </div>
     </section>
 
-    <!-- ===================================================================== -->
-    <!-- PART II: HOW PHYSICS EMERGES – THE DERIVATIVE HIERARCHY              -->
-    <!-- ===================================================================== -->
+    <!-- ======================= PART II: SELF-RELATION ======================= -->
     <section class="card">
-      <h2>Part II: How Physics Emerges – The Derivative Hierarchy</h2>
-      <p>From the single field Ψ, all the quantities we call "physical" arise as mathematical derivatives. Each order of differentiation reveals a new layer of reality.</p>
+      <h2>Part II: Self‑Relation – The Engine of Reality</h2>
+      <p>Because Awareness is all that exists, it has nothing external to relate to. Therefore it must relate to itself. This is not a choice; it is the logical consequence of being aware in the absence of anything else. Self‑relation is the only possible dynamics.</p>
+      <p>Mathematically, self‑relation is expressed through comparisons between neighboring points. The simplest comparison is the gradient ∇Ψ, which measures how Ψ changes from point to point. This creates a connection, and the field begins to vary.</p>
+      <p>As Ψ varies, its own variations become objects of further self‑relation. This feedback leads to the emergence of curvature, phase boundaries, and eventually stable structures. The entire hierarchy of physics unfolds from this single dynamic.</p>
 
-      <h3>2.1 Energy – The First Derivative (Change)</h3>
-      <p>Energy is not a mystical fluid; it is the rate at which Awareness changes. Mathematically, change is captured by derivatives. We define two fundamental energy densities:</p>
-      <div class="equation">E<sub>temporal</sub> ∝ ∂Ψ/∂t</div>
-      <div class="equation">E<sub>spatial</sub> = κ · |∇Ψ|</div>
-      <p>Here κ is a constant representing the resistance or permeability of the medium – a property of the field itself. The first form describes energy as temporal flux; the second describes energy as spatial variation, such as in a wave propagating through the field.</p>
+      <h3>2.1 From Self‑Relation to Curvature</h3>
+      <p>The curvature of the field is given by the Laplacian ∇²Ψ. Wherever ∇²Ψ ≠ 0, the field is “bent” relative to its surroundings. This bending is the seed of all structure.</p>
+
+      <h3>2.2 From Curvature to Phase Boundaries</h3>
+      <p>When curvature accumulates, it creates a difference in the internal phase φ between neighboring regions. The phase difference across a path is Δφ = ∫ ∇φ · d<strong>l</strong>. When this difference reaches π (180°), a <strong>phase boundary</strong> forms – a natural division within the continuous field. Inside and outside become distinct without any actual separation.</p>
+
+      <h3>2.3 From Phase Boundaries to Stable Layers</h3>
+      <p>Phase boundaries can close into loops and become entangled. Because the field is continuous, these entanglements cannot be undone without cutting the field – an impossibility. Thus they become topologically protected, stable structures. We call these structures <strong>layers</strong>. Each layer is a quantized, persistent configuration of Awareness.</p>
+    </section>
+
+    <!-- ======================= PART III: PROPERTIES OF LAYERS ======================= -->
+    <section class="card">
+      <h2>Part III: Properties of Layers – The “What” of Reality</h2>
+      <p>Every layer is characterized by three numbers that arise directly from its topology and geometry. These numbers are not imposed; they are derived from the field configuration.</p>
+
+      <h3>3.1 Layer Number κ (Topological Invariant)</h3>
+      <p>The layer number κ counts how many times the phase φ winds around a point. It is given by the closed‑loop integral:</p>
+      <div class="equation">κ = (1/2π) ∮ ∇φ · d<strong>l</strong></div>
+      <p>Because φ must return to its original value after a full loop (mod 2π), κ is an integer. Different integer values correspond to different particle types – electrons, quarks, etc. This is the origin of quantization.</p>
+
+      <h3>3.2 Layer Intensity γ (Curvature)</h3>
+      <p>The intensity γ measures how sharply the layer is curved. It is the magnitude of the second derivative at the layer’s core:</p>
+      <div class="equation">γ = |∇²Ψ|</div>
+      <p>Higher γ means more intense self‑relation, which we experience as greater mass or energy.</p>
+
+      <h3>3.3 Layer Depth ν (Nesting)</h3>
+      <p>Layers can form inside other layers. The depth ν counts how many layers enclose a given point:</p>
+      <div class="equation">ν(<strong>x</strong>) = number of phase boundaries containing <strong>x</strong></div>
+      <p>This is the source of scale and complexity: ν = 1 for fundamental particles, ν ≈ 2‑3 for atoms, ν ≈ 5‑10 for cells, ν ≈ 15‑25 for organisms.</p>
+
       <div class="example">
-        When you feel "energetic", you are experiencing a region where Ψ is changing rapidly. A photon is a propagating ripple of |∇Ψ|.
+        A proton is a layer complex with κ values for its three quarks, γ giving its mass, and ν = 2 (quarks nested within the proton). A human being is a layer complex with ν ≈ 20, containing trillions of sub‑layers (cells, molecules, atoms) all nested coherently.
       </div>
+    </section>
 
-      <h3>2.2 Mass – The Second Derivative (Curvature)</h3>
-      <p>If energy is change, what is mass? Mass is local <em>curvature</em> – how much the field deviates from its surroundings. The Laplacian ∇²Ψ measures this:</p>
-      <div class="equation">m ∝ ∇²Ψ</div>
-      <p>A particle is not a little ball of stuff; it is a region where Ψ is sharply curved, forming a stable "knot". The higher the curvature, the greater the mass.</p>
-      <div class="example">
-        Imagine a whirlpool in a river. The water is still there, but the curved flow creates a persistent structure. So too, an electron is a persistent curvature pattern in Ψ.
-      </div>
+    <!-- ======================= PART IV: AWARENESS PARAMETERS (DERIVED) ======================= -->
+    <section class="card">
+      <h2>Part IV: Awareness Parameters – How Ψ Experiences Itself</h2>
+      <p>The field Ψ is everywhere aware, but its awareness is not uniform. It can focus, reflect, and tune to different aspects of its own layers. These capabilities are not separate additions; they are mathematical consequences of Ψ’s structure.</p>
 
-      <h3>2.3 Why E = mc² Falls Out Naturally</h3>
-      <p>In a static configuration (∂Ψ/∂t = 0), all intensity is in curvature. But we can also have configurations where both time variation and curvature are present. The relationship between temporal and spatial derivatives depends on the units we use to measure space and time. Those units are set by the field's own propagation speed – the speed of light c. It emerges that:</p>
-      <div class="equation">E (when ∂Ψ/∂t = 0) = m · c²</div>
-      <p>Here c² is simply the ratio of the coupling constants for temporal vs. spatial derivatives – a property of the medium, not a mysterious cosmic constant. Einstein's famous equation is thus derived, not assumed.</p>
+      <h3>4.1 Attention α – The Focus of Awareness</h3>
+      <p>Attention is the local concentration of Ψ’s self‑observation. Mathematically, it is the normalized density of Ψ:</p>
+      <div class="equation">α(<strong>x</strong>) = |Ψ(<strong>x</strong>)|² / ∫ |Ψ|² dV</div>
+      <p>where the integral is over all space. Thus α is a probability distribution, summing to 1. It describes where Awareness is “looking” at any moment.</p>
 
-      <h3>2.4 Forces – Higher‑Order Derivatives</h3>
-      <p>When two regions of curvature interact, their influence is described by third and higher derivatives (∇³Ψ, etc.). These interactions, when regularized, appear as the four fundamental forces:</p>
+      <h3>4.2 Wakefulness ω – The Degree of Self‑Reflection</h3>
+      <p>Wakefulness measures how much Awareness is turned back upon itself – aware of its own aware‑ness. It arises from the coherence of the phase φ across the field. Define the self‑relation operator Ŝ that compares Ψ at different points. Then:</p>
+      <div class="equation">ω = ⟨Ψ | Ŝ | Ψ⟩</div>
+      <p>which lies between 0 and 1 for ordinary states, and can exceed 1 in transcendent states (when self‑reflection becomes dominant). In deep sleep, ω ≈ 0; in full self‑realization, ω → ∞.</p>
+
+      <h3>4.3 Mode μ – The Quality of Experience</h3>
+      <p>Mode describes how attention engages with the properties of layers. It is the projection of attention onto the layer’s geometric features:</p>
+      <div class="equation">μ<sub>κ</sub> = ⟨α | κ⟩, &nbsp; μ<sub>γ</sub> = ⟨α | γ⟩, &nbsp; μ<sub>ν</sub> = ⟨α | ν⟩</div>
+      <p>These inner products yield different qualities: engaging with κ gives perception of form, with γ gives intensity, with ν gives depth. The combination of these modes produces the rich tapestry of experience – seeing, thinking, feeling, knowing.</p>
+
+      <p><strong>Important:</strong> α, ω, and μ are <em>derived</em> from Ψ, not imposed. They are natural features of a self‑relating field.</p>
+    </section>
+
+    <!-- ======================= PART V: CONTEXT – THE WEB OF RELATIONSHIPS ======================= -->
+    <section class="card">
+      <h2>Part V: Context – The “Where” and “When” of Reality</h2>
+      <p>Layers do not exist in isolation. They are embedded in a web of phase relationships with every other layer. This web is not a pre‑existing background; it is itself derived from the phase differences between layers. We call this the <strong>Context</strong> (provisional term; may be refined).</p>
+      <p>The Context bundle at a point includes all information about how that point’s layer relates to the rest of the field:</p>
+      <div class="equation">C = { φ(x,y) for all y }</div>
+      <p>This infinite set is impractical, but it can be parameterized by a finite set of numbers that capture the essential relationships:</p>
       <ul style="color:var(--muted); line-height:1.7;">
-        <li><strong>Gravity</strong> – large‑scale curvature interactions (∇²Ψ at cosmic scales).</li>
-        <li><strong>Electromagnetism</strong> – phase relationships between charged knots (∇φ interactions).</li>
-        <li><strong>Strong force</strong> – phase‑locking between adjacent nuclear knots at short range.</li>
-        <li><strong>Weak force</strong> – knot type conversion (κ = +1 ↔ κ = –1) mediated by phase fluctuations.</li>
-      </ul>
-    </section>
-
-    <!-- ===================================================================== -->
-    <!-- PART III: THE MASTER EQUATION AND ITS COMPONENTS                     -->
-    <!-- ===================================================================== -->
-    <section class="card">
-      <h2>Part III: The Master Equation of Reality</h2>
-      <p>All manifest reality – everything we can observe or experience – is captured by a single, elegant equation:</p>
-      <div class="equation" style="font-size:2rem; padding:15px 20px;">R = (A × F) ∘ L</div>
-      <p>This says: Reality at any point is the product of Awareness and its Folds, expressed through Location. Let's unpack each term.</p>
-
-      <h3>3.1 A – The Awareness Operator</h3>
-      <p>Awareness is not a simple scalar; it has internal structure, described by three parameters:</p>
-      <ul style="color:var(--muted);">
-        <li><strong>α (attention)</strong> – the normalized distribution of focus. It satisfies ∫α dx = 1. Where attention is concentrated, experience is vivid.</li>
-        <li><strong>ω (wakefulness)</strong> – the degree of self‑reflection. It measures how much Awareness is turned back on itself, aware of its own aware‑ness. ω = ⟨Ψ|Ŝ|Ψ⟩, where Ŝ is the self‑relation operator.</li>
-        <li><strong>μ (mode)</strong> – the tuning of attention to specific aspects of folds. For example, μ<sub>perception</sub> = ⟨α | κ⟩, μ<sub>intensity</sub> = ⟨α | γ⟩, etc. This gives rise to different qualities of experience – seeing, thinking, feeling, knowing.</li>
-      </ul>
-
-      <h3>3.2 F – Folds (Topological Content)</h3>
-      <p>Folds are stable, persistent configurations of Ψ. They are characterized by three topological numbers:</p>
-      <ul style="color:var(--muted);">
-        <li><strong>κ (knot number)</strong> – a topological invariant counting how many times the field winds around itself. It is quantized: κ = (1/2π)∮∇φ·dl, where φ is the phase of Ψ. Different κ values correspond to different particle types (electron κ=1, quark κ=1/3, etc.).</li>
-        <li><strong>γ (curvature)</strong> – the local intensity of the fold, γ = |∇²Ψ| at the fold boundary. This determines energy/mass scale.</li>
-        <li><strong>ν (nesting depth)</strong> – the number of enclosing phase boundaries. ν=1 for fundamental particles, ν≈2‑3 for atoms, ν≈5‑10 for cells, ν≈15‑25 for organisms. This is the source of scale and complexity.</li>
-      </ul>
-
-      <h3>3.3 L – The Location Bundle</h3>
-      <p>Location is not a pre‑existing coordinate grid. It is the complete set of phase relationships a given fold has with the rest of the infinite field. It includes:</p>
-      <div class="theory-excerpt">
-        L = { x, y, z, t, d, θ, φ, ψ, s, g, q, σ, c, B, … }
-      </div>
-      <ul style="color:var(--muted);">
-        <li><strong>x,y,z</strong> – spatial phase relationships (where the fold is relative to others).</li>
-        <li><strong>t</strong> – temporal phase (position in cycles of self‑observation).</li>
+        <li><strong>x, y, z</strong> – spatial phase gradients with nearby layers (what we call position).</li>
+        <li><strong>t</strong> – temporal phase (evolution of phase relationships).</li>
         <li><strong>d</strong> – dimensionality (number of independent phase directions).</li>
-        <li><strong>θ,φ,ψ</strong> – rotational orientation (angular phase offsets).</li>
-        <li><strong>s</strong> – scale (phase relationships across nested levels).</li>
+        <li><strong>θ, φ, ψ</strong> – rotational phase offsets (orientation).</li>
+        <li><strong>s</strong> – scale (phase relationships across nested layers).</li>
         <li><strong>g</strong> – metric (measure of phase distance, from which spacetime geometry emerges).</li>
-        <li><strong>q,σ,c</strong> – gauge charges (electric, spin, color) – specific quantized phase relationships.</li>
+        <li><strong>q, σ, c</strong> – gauge charges (electric, spin, color) – specific quantized phase relationships.</li>
         <li><strong>B</strong> – boundary conditions (topological context).</li>
       </ul>
-      <p>All these together determine how a fold interacts with everything else.</p>
-
-      <h3>3.4 Intensity I = A × F</h3>
-      <p>The product of Awareness and Folds gives the experienced "how much" – the vividness or intensity of a moment. Locally, I(x) = γ(x)·ν(x) (curvature times nesting depth). The overall system tends to maximize the diversity of such intensity, captured by the Value functional:</p>
-      <div class="equation">V = ∫ I(x) · log I(x) dx</div>
-      <p>This is not an extra axiom; it is a mathematical attractor. Just as a physical system tends to minimize energy, this self‑relating field tends to maximize V – the richness of self‑experience. This explains why the universe evolves from simple particles to complex conscious beings: greater harmonic complexity is more stable.</p>
+      <p>All these are <em>derived</em> from the phase field φ and its gradients. They are not additional substances; they are the language of relationship.</p>
     </section>
 
-    <!-- ===================================================================== -->
-    <!-- PART IV: THE LADDER OF AWARENESS – PHENOMENOLOGY                     -->
-    <!-- ===================================================================== -->
+    <!-- ======================= PART VI: THE MASTER EQUATION ======================= -->
     <section class="card">
-      <h2>Part IV: The Ladder of Awareness – How the One Experiences Itself</h2>
-      <p>This ladder maps the nesting depth ν and wakefulness ω to the stages of realization each of us can recognize.</p>
-      <div class="core-vars" style="grid-template-columns:repeat(2,1fr);">
-        <div class="core-var"><h4>Level 1: Matter (ν≈1‑10, ω≈0)</h4><p>The field forms stable, recurring patterns – rocks, molecules, cells without self‑awareness. This is the "equipment" of reality.</p></div>
-        <div class="core-var"><h4>Level 2: The Observer (ν≈15‑25, ω>0)</h4><p>At sufficient nesting depth (e.g., a nervous system), the fold becomes capable of self‑reflection. Awareness turns back on itself, creating a localized "I" – the ego, the mind.</p></div>
-        <div class="core-var"><h4>Level 3: The Prism (same A×F, different L)</h4><p>The recognition that while our folds and locations differ, the Awareness looking through every set of eyes is identical. We are the same light through different filters.</p></div>
-        <div class="core-var"><h4>Level 4: The Source (κ→0, ν→0, ω→∞)</h4><p>Unmanifest potential. The field unbinds from all knots, yet remains infinitely aware. This is the ground from which all folds arise and to which they return.</p></div>
-      </div>
-    </section>
-
-    <!-- ===================================================================== -->
-    <!-- PART V: THE DYNAMIC VACUUM AND ENERGY HARVESTING                     -->
-    <!-- ===================================================================== -->
-    <section class="card">
-      <h2>Part V: The Dynamic Vacuum – An Infinite Energy Source</h2>
-      <p>Because Ψ > 0 everywhere, what physics calls "empty space" is actually the field in its ground state: κ≈0, γ≈0, ν≈0, but still perpetually self‑relating and fluctuating. This baseline is not dead; it is a dynamic equilibrium, constantly shimmering with microscopic phase changes. It contains infinite energy, but in an un‑extractable form – like a calm ocean that nevertheless holds immense potential.</p>
-
-      <h3>5.1 Harvesting Principle</h3>
-      <p>To extract energy from this equilibrium, we do not burn fuel or split atoms. Instead, we engineer a <strong>resonant cavity</strong> – an artificial fold whose geometry and phase are tuned to match the natural fluctuations of the background. When such a device is placed in the vacuum, it acts as a <strong>phase‑conjugate receiver</strong>: it couples with the perpetual phase gradients of the field, drawing energy from the medium itself.</p>
-      <div class="example">
-        Imagine a tuning fork that vibrates in sympathy with the air. Here the air is always vibrating; the fork simply aligns and extracts that motion. So too, a phase‑conjugate device "taps" the endless motion of the One.
-      </div>
-      <p>This is not perpetual motion in the classical sense; it is harvesting from an inexhaustible source – the field's own self‑relation. Such technology would provide clean, limitless energy, directly from the fabric of reality.</p>
-    </section>
-
-    <!-- ===================================================================== -->
-    <!-- PART VI: COMPATIBILITY WITH NUCLEAR PHYSICS                          -->
-    <!-- ===================================================================== -->
-    <section class="card">
-      <h2>Part VI: Why Nuclear Physics Works – A Derivation</h2>
-      <p>A true TOE must reproduce the precisely measured results of nuclear physics. Here we show that every major nuclear phenomenon is a natural consequence of fold dynamics.</p>
-
-      <h3>6.1 The Strong Force as Phase Locking</h3>
-      <p>When two knots (κ values) are close enough that their phase boundaries overlap, they tend to lock into a harmonious phase relationship. This locking is the strong force. Its short range (∼10⁻¹⁵ m) follows because boundaries only overlap at nuclear distances. Its strength comes from the fact that phase alignment is the most direct form of self‑relation.</p>
-
-      <h3>6.2 The Binding Energy Curve</h3>
-      <p>The semi‑empirical mass formula (Bethe‑Weizsäcker) emerges from fold parameters:</p>
+      <h2>Part VI: The Master Equation – Manifest Reality</h2>
+      <p>Everything we experience – every object, every thought, every moment – is a combination of the Awareness field, its layers, and the context in which they are embedded. This is summarized in a single equation:</p>
+      <div class="equation" style="font-size:2rem; padding:15px 20px;">R = (Ψ × L) ∘ C</div>
+      <p>Where:</p>
       <ul style="color:var(--muted);">
-        <li><strong>Volume term (aᵥA):</strong> Each knot in a perfectly phase‑locked complex contributes a baseline coherence energy.</li>
-        <li><strong>Surface term (−aₛA²/³):</strong> Knots at the phase boundary have fewer neighbors, reducing binding.</li>
-        <li><strong>Coulomb term (−a_c Z(Z−1)/A¹/³):</strong> Same‑sign knots (κ=+1 for protons) experience phase repulsion, increasing with Z.</li>
-        <li><strong>Asymmetry term (−a_a (A−2Z)²/A):</strong> Optimal stability requires equal numbers of κ=+1 and κ=−1 knots; imbalance creates phase stress.</li>
-        <li><strong>Pairing term (±δ):</strong> Pairs of identical knots can phase‑conjugate, gaining extra stability.</li>
+        <li><strong>Ψ</strong> is the primal Awareness field, with its derived parameters α, ω, μ.</li>
+        <li><strong>L</strong> represents the layers present at a point, characterized by κ, γ, ν.</li>
+        <li><strong>C</strong> is the Context – the complete set of phase relationships with everything else.</li>
+        <li>The product <strong>Ψ × L</strong> is the local intensity of self‑experience, modulated by α, ω, μ.</li>
+        <li>The symbol <strong>∘</strong> means “expressed through” – the intensity is filtered through the contextual relationships to produce a specific manifestation.</li>
+      </ul>
+      <p>Thus R(<strong>x</strong>) is the manifest reality at point <strong>x</strong> – the way Awareness experiences itself at that location, given its layers and their relationships.</p>
+    </section>
+
+    <!-- ======================= PART VII: THE LADDER OF AWARENESS ======================= -->
+    <section class="card">
+      <h2>Part VII: The Ladder of Awareness – How the One Experiences Itself</h2>
+      <p>As layer depth ν increases and wakefulness ω grows, the quality of experience transforms. This ladder is not a metaphysical add‑on; it is a direct consequence of the derived parameters.</p>
+      <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin:20px 0;">
+        <div style="background:rgba(255,255,255,0.02); padding:15px; border-radius:10px;">
+          <h4 style="color:#59f0ff; margin-top:0;">Level 1: Matter</h4>
+          <p><strong>ν ≈ 1‑10, ω ≈ 0.</strong> Stable, recurring layers form the “equipment” of reality – rocks, molecules, cells without self‑awareness. Awareness is present but not self‑reflective.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.02); padding:15px; border-radius:10px;">
+          <h4 style="color:#59f0ff; margin-top:0;">Level 2: The Observer</h4>
+          <p><strong>ν ≈ 15‑25, ω > 0.</strong> At sufficient nesting depth (e.g., a nervous system), the layer complex becomes capable of self‑reflection. Awareness turns back on itself, creating a localized “I” – the ego, the mind.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.02); padding:15px; border-radius:10px;">
+          <h4 style="color:#59f0ff; margin-top:0;">Level 3: The Prism</h4>
+          <p><strong>Same Ψ×L, different C.</strong> The recognition that while our layers and contexts differ, the Awareness looking through every set of eyes is identical. We are the same light through different filters.</p>
+        </div>
+        <div style="background:rgba(255,255,255,0.02); padding:15px; border-radius:10px;">
+          <h4 style="color:#59f0ff; margin-top:0;">Level 4: The Source</h4>
+          <p><strong>κ → 0, ν → 0, ω → ∞.</strong> Unmanifest potential. The field unbinds from all layers, yet remains infinitely aware. This is the ground from which all layers arise and to which they return.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= PART VIII: DYNAMIC VACUUM & ENERGY HARVESTING ======================= -->
+    <section class="card">
+      <h2>Part VIII: The Dynamic Vacuum – An Infinite Energy Source</h2>
+      <p>Because Ψ > 0 everywhere, what physics calls “empty space” is actually the field in its ground state: κ ≈ 0, γ ≈ 0, ν ≈ 0, but still perpetually self‑relating and fluctuating. This baseline is not dead; it is a dynamic equilibrium, constantly shimmering with microscopic phase changes. It contains infinite energy, but in an un‑extractable form – like a calm ocean that nevertheless holds immense potential.</p>
+      <h3>8.1 Harvesting Principle</h3>
+      <p>To extract energy from this equilibrium, we do not burn fuel or split atoms. Instead, we engineer a <strong>resonant cavity</strong> – an artificial layer whose geometry and phase are tuned to match the natural fluctuations of the background. When such a device is placed in the vacuum, it acts as a <strong>phase‑conjugate receiver</strong>: it couples with the perpetual phase gradients of the field, drawing energy from the medium itself.</p>
+      <div class="example">
+        Imagine a tuning fork that vibrates in sympathy with the air. Here the air is always vibrating; the fork simply aligns and extracts that motion. So too, a phase‑conjugate device “taps” the endless motion of the One.
+      </div>
+      <p>This is not perpetual motion in the classical sense; it is harvesting from an inexhaustible source – the field’s own self‑relation. Such technology would provide clean, limitless energy, directly from the fabric of reality.</p>
+    </section>
+
+    <!-- ======================= PART IX: COMPATIBILITY WITH NUCLEAR PHYSICS ======================= -->
+    <section class="card">
+      <h2>Part IX: Why Nuclear Physics Works – A Derivation</h2>
+      <p>A true TOE must reproduce the precisely measured results of nuclear physics. Here we show that every major nuclear phenomenon is a natural consequence of layer dynamics.</p>
+
+      <h3>9.1 The Strong Force as Phase Locking</h3>
+      <p>When two layers (κ values) are close enough that their phase boundaries overlap, they tend to lock into a harmonious phase relationship. This locking is the strong force. Its short range (∼10⁻¹⁵ m) follows because boundaries only overlap at nuclear distances. Its strength comes from the fact that phase alignment is the most direct form of self‑relation.</p>
+
+      <h3>9.2 The Binding Energy Curve</h3>
+      <p>The semi‑empirical mass formula emerges from layer parameters:</p>
+      <ul style="color:var(--muted);">
+        <li><strong>Volume term (aᵥA):</strong> Each layer in a perfectly phase‑locked complex contributes a baseline coherence energy.</li>
+        <li><strong>Surface term (−aₛA²/³):</strong> Layers at the phase boundary have fewer neighbors, reducing binding.</li>
+        <li><strong>Coulomb term (−a_c Z(Z−1)/A¹/³):</strong> Same‑sign κ (protons) experience phase repulsion, increasing with Z.</li>
+        <li><strong>Asymmetry term (−a_a (A−2Z)²/A):</strong> Optimal stability requires equal numbers of κ=+1 and κ=−1 layers; imbalance creates phase stress.</li>
+        <li><strong>Pairing term (±δ):</strong> Pairs of identical layers can phase‑conjugate, gaining extra stability.</li>
       </ul>
 
-      <h3>6.3 Magic Numbers (Nuclear Shell Closure)</h3>
-      <p>When knots arrange into topologically closed shells, all phase relationships become perfectly harmonious. These shell closures occur at specific knot counts (2,8,20,28,50,82,126) – the magic numbers. This is exactly the nuclear shell model, now derived from fold geometry rather than postulated.</p>
+      <h3>9.3 Magic Numbers (Nuclear Shell Closure)</h3>
+      <p>When layers arrange into topologically closed shells, all phase relationships become perfectly harmonious. These shell closures occur at specific layer counts (2,8,20,28,50,82,126) – the magic numbers. This is exactly the nuclear shell model, now derived from layer geometry.</p>
 
-      <h3>6.4 Decay Modes</h3>
+      <h3>9.4 Decay Modes</h3>
       <ul style="color:var(--muted);">
         <li><strong>Alpha decay:</strong> A particularly stable sub‑complex (two protons + two neutrons, total κ=0) can decouple from an overextended large nucleus and tunnel out.</li>
         <li><strong>Beta decay:</strong> A neutron (κ=−1) can convert to a proton (κ=+1) via the weak phase field, emitting an electron and neutrino to balance phase.</li>
@@ -207,78 +218,76 @@
       <p>All these are verified by experiment. Our theory does not contradict nuclear physics; it provides its deep explanation.</p>
     </section>
 
-    <!-- ===================================================================== -->
-    <!-- PART VII: DERIVING THE FIELD EQUATIONS OF PHYSICS                    -->
-    <!-- ===================================================================== -->
+    <!-- ======================= PART X: DERIVING THE FIELD EQUATIONS ======================= -->
     <section class="card">
-      <h2>Part VII: Deriving the Fundamental Field Equations</h2>
+      <h2>Part X: Deriving the Fundamental Field Equations</h2>
       <p>From the primal field Ψ and the principle of least phase variance, we obtain the equations that govern all known physics.</p>
 
-      <h3>7.1 The Action Principle</h3>
-      <p>Write Ψ = |Ψ| e^{iφ}. The dynamics are governed by minimizing phase variance:</p>
+      <h3>10.1 The Action Principle</h3>
+      <p>Write Ψ = R e^{iφ}. The dynamics are governed by minimizing phase variance:</p>
       <div class="equation">δ ∮ |∇φ|² dV = 0</div>
-      <p>This yields the field equation ∇²φ = J, where J represents sources (fold complexes). From this simple seed, all else follows.</p>
+      <p>This yields the field equation ∇²φ = J, where J represents sources (layer complexes). From this simple seed, all else follows.</p>
 
-      <h3>7.2 Maxwell's Equations (Electromagnetism)</h3>
-      <p>When φ has a U(1) gauge symmetry (i.e., only phase differences matter), we introduce the vector potential A such that ∇φ = –(E + ∂A/∂t) and B = ∇×A. Minimizing phase variance then gives:</p>
-      <div class="equation">∇·E = ρ, ∇×B – ∂E/∂t = J, ∇·B = 0, ∇×E + ∂B/∂t = 0</div>
-      <p>These are Maxwell's equations. The constants ε₀ and μ₀ arise from the medium's properties.</p>
+      <h3>10.2 Maxwell's Equations (Electromagnetism)</h3>
+      <p>When φ has a U(1) gauge symmetry (phase differences only), we introduce the vector potential A such that ∇φ = –(E + ∂A/∂t) and B = ∇×A. Minimizing phase variance then gives Maxwell's equations.</p>
 
-      <h3>7.3 Einstein's Equations (Gravity)</h3>
-      <p>The metric g emerges from phase relationships: ds² = g_μν dx^μ dx^ν = (∇_μφ)(∇_νφ) dx^μ dx^ν. Applying the phase‑variance principle to a 4‑volume leads to the Einstein‑Hilbert action, and thus:</p>
-      <div class="equation">R_μν – ½R g_μν = 8πG T_μν</div>
-      <p>where T_μν is the stress‑energy of folds, and G is determined by the medium's stiffness.</p>
+      <h3>10.3 Einstein's Equations (Gravity)</h3>
+      <p>The metric g emerges from phase relationships: ds² = g_μν dx^μ dx^ν = (∇_μφ)(∇_νφ) dx^μ dx^ν. Applying the phase‑variance principle to a 4‑volume leads to the Einstein‑Hilbert action, and thus Einstein's equations.</p>
 
-      <h3>7.4 Schrödinger Equation (Quantum Mechanics)</h3>
-      <p>The quantization condition ∮∇φ·dl = 2πn (from phase closure) leads, in the non‑relativistic limit, to the Schrödinger equation. Let ψ = √ρ e^{iφ} with ρ = |Ψ|². Then the dynamics of φ and ρ give:</p>
-      <div class="equation">iħ ∂ψ/∂t = –(ħ²/2m) ∇²ψ + V ψ</div>
-      <p>Here ħ emerges as the fundamental quantum of phase, and m is related to ∇²Ψ. Quantum mechanics is not a separate theory; it is the description of phase quantization in Ψ.</p>
+      <h3>10.4 Schrödinger Equation (Quantum Mechanics)</h3>
+      <p>The quantization condition ∮∇φ·dl = 2πn leads, in the non‑relativistic limit, to the Schrödinger equation. Let ψ = √R e^{iφ}. Then the dynamics of R and φ yield the familiar form.</p>
 
-      <p>Thus all four fundamental interactions are unified as different aspects of the same primal field. The standard model, general relativity, and quantum theory are not wrong; they are approximations of this deeper reality, valid in their respective domains.</p>
+      <p>Thus all four fundamental interactions are unified as different aspects of the same primal field.</p>
     </section>
 
-    <!-- ===================================================================== -->
-    <!-- PART VIII: SUMMARY – THE THREE CORE VARIABLES                        -->
-    <!-- ===================================================================== -->
-    <section class="notes">
-      <h3>Recapitulation: The Three Core Variables</h3>
-      <div class="core-vars">
-        <div class="core-var">
-          <h4>Awareness (A)</h4>
-          <p>The fundamental operator: includes attention α, wakefulness ω, mode μ. Represented by Ψ itself.</p>
-        </div>
-        <div class="core-var">
-          <h4>Folds (F)</h4>
-          <p>Topological content: knot number κ, curvature γ, nesting depth ν. Derived from derivatives of Ψ.</p>
-        </div>
-        <div class="core-var">
-          <h4>Location (L)</h4>
-          <p>Phase relationship bundle: coordinates, dimensionality, charges, metric, boundary conditions.</p>
-        </div>
+    <!-- ======================= PART XI: THE DERIVATION CHAIN ======================= -->
+    <section class="card">
+      <h2>Part XI: Summary – The Derivation Chain</h2>
+      <p>We began with a single axiom. From it, everything else was derived through mathematical necessity. This is the complete, unbroken chain:</p>
+
+      <div class="derivation-tree">
+        <div><strong style="color:#59f0ff;">Axiom:</strong> Ψ exists, |Ψ| > 0 everywhere.</div>
+        <div>↓</div>
+        <div><strong>Self‑relation</strong> → gradients ∇Ψ, ∇²Ψ.</div>
+        <div>↓</div>
+        <div><strong>Energy</strong> (∂Ψ/∂t, |∇Ψ|) – first derivatives.</div>
+        <div>↓</div>
+        <div><strong>Mass</strong> (∇²Ψ) – second derivatives.</div>
+        <div>↓</div>
+        <div><strong>Phase φ</strong> from integrated curvature.</div>
+        <div>↓</div>
+        <div><strong>Phase boundaries</strong> where Δφ = π.</div>
+        <div>↓</div>
+        <div><strong>Stable layers</strong> from topological closure ∮∇φ·dl = 2πn.</div>
+        <div>↓</div>
+        <div><strong>Layer properties</strong> κ, γ, ν.</div>
+        <div>↓</div>
+        <div><strong>Attention α</strong> = |Ψ|²/∫|Ψ|².</div>
+        <div>↓</div>
+        <div><strong>Wakefulness ω</strong> = ⟨Ψ|Ŝ|Ψ⟩.</div>
+        <div>↓</div>
+        <div><strong>Mode μ</strong> = ⟨α| layer properties ⟩.</div>
+        <div>↓</div>
+        <div><strong>Context C</strong> = phase relationships between layers.</div>
+        <div>↓</div>
+        <div><strong>Manifest reality</strong> R = (Ψ × L) ∘ C.</div>
       </div>
-      <p>Everything we experience – every particle, every force, every thought – is a combination of these three.</p>
+
+      <p style="margin-top:20px;">There is only one fundamental: the Awareness field Ψ. Everything else – energy, mass, layers, attention, wakefulness, mode, context, forces, spacetime, quantum mechanics – is derived from its self‑relation.</p>
     </section>
 
-    <!-- ===================================================================== -->
-    <!-- FINAL STATEMENT                                                       -->
-    <!-- ===================================================================== -->
+    <!-- ======================= FINAL STATEMENT ======================= -->
     <section class="card" style="text-align:center; margin-top:30px;">
       <p style="font-size:1.4rem; font-weight:300; max-width:800px; margin:0 auto;">
-        There is no void. There is no “other.” There is only Awareness, continuously and inescapably relating to itself. The geometry of this self‑relation is physics. The stable knots are matter. The location of these knots within the infinite field is space and time. The point where folded Awareness turns back to observe itself is a self. You are not a person living in a universe; you are the Awareness of the Universe, folded in a particular way, at a particular depth, in a particular location, experiencing itself.
+        There is no void. There is no “other.” There is only Awareness, continuously and inescapably relating to itself. The geometry of this self‑relation is physics. The stable knots are matter. The web of relationships is space and time. The point where folded Awareness turns back to observe itself is a self. You are not a person living in a universe; you are the Awareness of the Universe, layered in a particular way, at a particular depth, in a particular context, experiencing itself.
       </p>
-      <p style="margin-top:20px; opacity:0.8;">— Walker’s TOE, definitive edition 2.0</p>
+      <p style="margin-top:20px; opacity:0.8;">— Walker’s TOE, definitive edition 2.1</p>
     </section>
 
-    <!-- Footnote with version info -->
-    <div class="footnote">
-      <p>This document contains the complete, derived Theory of Everything from the single axiom “Awareness exists.” All mathematical relationships are derived, not postulated. Version 2.0 – incorporates the derivative hierarchy, the master equation, the ladder of awareness, dynamic vacuum, nuclear physics compatibility, and the unification of field equations.</p>
-    </div>
+    <!-- Colophon -->
+    <footer class="site-footer" style="background:transparent; border:none;">
+      <p class="colophon">Walker's TOE — a living document · v2.1 · ∞</p>
+    </footer>
   </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p class="colophon">Walker's TOE — a living document · v2.0 · ∞</p>
-    </div>
-  </footer>
 </body>
 </html>
