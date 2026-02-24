@@ -1,100 +1,253 @@
-:root{
+/* =========================================
+   1. CORE VARIABLES & RESET
+   ========================================= */
+:root {
   --bg-1: #060617;
   --bg-2: #0b1020;
   --accent: #59f0ff;
   --muted: rgba(255,255,255,0.65);
+  --glass: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.05);
 }
-*{box-sizing:border-box}
-html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;background:var(--bg-1);color:#e8f6ff}
-.container{max-width:1000px;margin:0 auto;padding:24px}
 
-/* Canvas background: layered animated gradients + subtle noise */
-.canvas-bg{
-  position:fixed;inset:0;z-index:-2;pointer-events:none;
-  background: radial-gradient(ellipse at 20% 10%, rgba(74,19,255,0.18), transparent 15%),
-              radial-gradient(ellipse at 80% 80%, rgba(10,200,255,0.08), transparent 20%),
-              linear-gradient(120deg,#030316 0%, #071029 50%, #04102a 100%);
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: var(--bg-1);
+  color: #e8f6ff;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* =========================================
+   2. DYNAMIC BACKGROUND
+   ========================================= */
+.canvas-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background: 
+    radial-gradient(ellipse at 20% 10%, rgba(74,19,255,0.18), transparent 15%),
+    radial-gradient(ellipse at 80% 80%, rgba(10,200,255,0.08), transparent 20%),
+    linear-gradient(120deg, #030316 0%, #071029 50%, #04102a 100%);
   animation: bgShift 20s linear infinite;
 }
-.canvas-bg::after{
-  content:'';position:absolute;inset:0;mix-blend-mode:screen;opacity:0.12;background-image:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><filter id="n"><feTurbulence baseFrequency="0.8" numOctaves="1" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.8"/></svg>');
+
+.canvas-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: screen;
+  opacity: 0.12;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><filter id="n"><feTurbulence baseFrequency="0.8" numOctaves="1" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.8"/></svg>');
 }
 
-@keyframes bgShift{from{transform:scale(1)}50%{transform:scale(1.03)}to{transform:scale(1)}}
+@keyframes bgShift {
+  from { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  to { transform: scale(1); }
+}
 
-.site-header{position:sticky;top:0;background:linear-gradient(90deg,rgba(2,6,15,0.6),rgba(6,8,16,0.35));backdrop-filter:blur(6px);padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.03);z-index:10}
-.header-inner{display:flex;align-items:center;justify-content:space-between}
-.brand{font-weight:800;letter-spacing:0.6px}
-.brand .accent{color:var(--accent);text-shadow:0 0 18px rgba(89,240,255,0.12)}
-.site-nav a{color:var(--muted);text-decoration:none;margin-left:18px;padding:8px;border-radius:6px}
-.site-nav a.active, .site-nav a:hover{color:#fff;background:linear-gradient(90deg,rgba(89,240,255,0.06),rgba(59,120,255,0.02))}
+/* =========================================
+   3. HEADER & NAVIGATION
+   ========================================= */
+.site-header {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(90deg, rgba(2,6,15,0.6), rgba(6,8,16,0.35));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 12px 0;
+  border-bottom: 1px solid var(--glass-border);
+  z-index: 100;
+}
 
-.main{padding-bottom:40px}
-.hero{padding:48px 0}
-.title{font-size:42px;margin:0 0 8px}
-.tagline{color:var(--muted);margin-top:0}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-.shimmer-divider{display:inline-block;margin:22px 0;padding:18px 28px;border-radius:14px;font-weight:700;color:#dff8ff;position:relative;overflow:hidden;box-shadow:0 6px 28px rgba(15,20,40,0.6)}
-.shimmer-divider::before{content:'';position:absolute;inset:0;z-index:0;filter:blur(22px);opacity:0.98;background:linear-gradient(90deg, rgba(6,12,30,0.92), rgba(10,30,60,0.86), rgba(6,12,30,0.92));}
-.shimmer-divider::after{content:'';position:absolute;left:-40%;top:0;bottom:0;width:60%;transform:skewX(-12deg);background:linear-gradient(90deg,transparent,rgba(180,240,255,0.8),transparent);animation:shimmer 2.6s linear infinite;mix-blend-mode:screen;opacity:0.95}
-.shimmer-divider{position:relative;z-index:1}
-@keyframes shimmer{0%{left:-60%}100%{left:120%}}
+.site-nav a {
+  color: var(--muted);
+  text-decoration: none;
+  margin-left: 18px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
 
-.card{background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));padding:22px;border-radius:12px;margin-top:18px;backdrop-filter:blur(6px);box-shadow:0 10px 30px rgba(5,10,20,0.6)}
-.muted{color:var(--muted)}
-.cta-row{margin-top:16px}
-.btn{display:inline-block;background:linear-gradient(90deg,var(--accent),#2fb2ff);color:#041023;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;margin-right:10px}
-.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+.site-nav a.active, .site-nav a:hover {
+  color: #fff;
+  background: linear-gradient(90deg, rgba(89,240,255,0.1), rgba(59,120,255,0.05));
+}
 
-.notes{margin-top:32px}
-.notes ul{columns:2;gap:20px}
+/* =========================================
+   4. HERO & SHIMMER BRANDING
+   ========================================= */
+.hero { padding: 48px 0; }
+.title { font-size: 42px; margin: 0 0 8px; letter-spacing: -0.5px; }
+.tagline { color: var(--muted); font-size: 1.2rem; margin-top: 0; }
 
-.break-section{margin-top:26px}
-.break-section details{margin-top:8px;color:var(--muted)}
-.sources{margin-top:8px;color:var(--muted)}
+.shimmer-divider {
+  display: inline-block;
+  margin: 22px 0;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 700;
+  color: #dff8ff;
+  position: relative;
+  overflow: hidden;
+  background: rgba(10, 30, 60, 0.4);
+  border: 1px solid var(--glass-border);
+}
 
-.site-footer{padding:12px 0;border-top:1px solid rgba(255,255,255,0.02);color:var(--muted);text-align:center}
+.shimmer-divider::after {
+  content: '';
+  position: absolute;
+  left: -100%;
+  top: 0;
+  bottom: 0;
+  width: 60%;
+  background: linear-gradient(90deg, transparent, rgba(180,240,255,0.3), transparent);
+  animation: shimmer 3s infinite;
+  transform: skewX(-20deg);
+}
 
-@media (max-width:700px){.container{padding:18px}.title{font-size:30px}.notes ul{columns:1}}
+@keyframes shimmer {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
 
-/* Styling for preformatted theory content (preserves exact text)
-  This does not modify your theory text — it only changes presentation. */
-.theory-block{margin-top:12px}
-.theory-pre, .theory-excerpt{white-space:pre-wrap;font-family:inherit;font-size:15px;line-height:1.5;color:#eafcff;background:transparent;border-radius:8px;padding:8px}
-.theory-excerpt{opacity:0.9;border-left:2px solid rgba(89,240,255,0.12);margin-top:12px}
+/* =========================================
+   5. CARDS & SECTIONS
+   ========================================= */
+.card {
+  background: linear-gradient(180deg, var(--glass), rgba(255,255,255,0.01));
+  padding: 28px;
+  border-radius: 16px;
+  margin-top: 24px;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
 
-.theory-controls{margin-top:10px}
-.theory-rendered h3{color:#cfffff;margin:18px 0 8px}
-.theory-rendered p{color:#dff8ff;margin:8px 0;line-height:1.6}
-.theory-rendered p:first-of-type{margin-top:6px}
-.theory-rendered hr{border:0;height:1px;background:linear-gradient(90deg,transparent,rgba(89,240,255,0.06),transparent);margin:12px 0}
+h2 { color: var(--accent); margin-top: 0; font-size: 1.8rem; }
+h3 { color: #cfffff; margin: 24px 0 12px; }
 
-/* Core variables layout */
-.core-vars{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:18px}
-.core-var{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
-.core-var h4{margin:0 0 6px;color:#bffaff;font-weight:700}
-.core-var p{margin:0;color:var(--muted);line-height:1.45}
+/* =========================================
+   6. THE HOVER DICTIONARY (TOOLTIPS)
+   ========================================= */
+.var-tip {
+  position: relative;
+  display: inline-block;
+  color: var(--accent);
+  cursor: help;
+  font-weight: 600;
+  border-bottom: 1px dotted rgba(89,240,255,0.4);
+  padding: 0 2px;
+  transition: background 0.2s ease;
+}
 
-@media (max-width:900px){.core-vars{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:600px){.core-vars{grid-template-columns:1fr}}
+.var-tip:hover {
+  background: rgba(89, 240, 255, 0.1);
+  border-radius: 4px;
+}
 
-/* Equation styling (improves display of the Master Equation) */
-.equation{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(180deg,rgba(0,8,18,0.6),rgba(0,6,12,0.6));color:#bffaff;font-weight:700;font-size:20px;margin:10px 0}
+.var-tip::after {
+  content: attr(data-tip);
+  position: absolute;
+  bottom: 140%;
+  left: 50%;
+  transform: translateX(-50%) scale(0.9);
+  background: #0a0a1a;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  font-size: 0.85rem;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  z-index: 1000;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+  pointer-events: none;
+}
 
-/* Two-column breakdown layout */
-.split{display:grid;grid-template-columns:2fr 1.2fr;gap:28px;align-items:start;margin-top:18px}
-.panel{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));padding:20px;border-radius:12px}
-.panel-right .placeholder{color:var(--muted);line-height:1.6}
-.panel-right .section-break{height:1px;background:linear-gradient(90deg,transparent,rgba(89,240,255,0.04),transparent);margin:18px 0}
+.var-tip:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) scale(1) translateY(-5px);
+}
 
-@media (max-width:1000px){.split{grid-template-columns:1fr}} 
+/* =========================================
+   7. EQUATIONS & THEORY BLOCKS
+   ========================================= */
+.equation {
+  display: inline-block;
+  padding: 14px 20px;
+  border-radius: 12px;
+  background: rgba(0, 8, 18, 0.7);
+  border: 1px solid rgba(89, 240, 255, 0.1);
+  color: #bffaff;
+  font-weight: 500;
+  font-size: 1.4rem;
+  margin: 16px 0;
+  font-family: 'Inter', monospace;
+  box-shadow: inset 0 2px 10px rgba(0,0,0,0.5);
+}
 
-/* Per-section two-column rows for aligned breakdown */
-.section-row{display:grid;grid-template-columns:2fr 1fr;gap:26px;align-items:start;margin:22px 0;padding:12px 0}
-.panel-left{padding-right:8px}
-.panel-right{padding-left:8px}
-.panel-right .placeholder{color:var(--muted)}
-@media (max-width:1000px){.section-row{grid-template-columns:1fr}}
+.derivation-tree {
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 2.2;
+  background: rgba(0,0,0,0.3);
+  padding: 24px;
+  border-radius: 14px;
+  border-left: 3px solid var(--accent);
+}
 
+.example {
+  background: rgba(255,255,255,0.02);
+  padding: 1.2em 1.6em;
+  border-radius: 10px;
+  margin: 1.5em 0;
+  border-left: 2px solid var(--accent);
+  font-style: italic;
+  color: #d1e5ff;
+}
 
+.example::before { content: "➤ "; color: var(--accent); font-weight: bold; }
 
+/* =========================================
+   8. UTILITIES & RESPONSIVENESS
+   ========================================= */
+.muted { color: var(--muted); }
+
+.site-footer {
+  padding: 40px 0;
+  margin-top: 40px;
+  border-top: 1px solid var(--glass-border);
+  color: var(--muted);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 700px) {
+  .container { padding: 16px; }
+  .title { font-size: 32px; }
+  .equation { font-size: 1.1rem; width: 100%; text-align: center; }
+  .var-tip::after { white-space: normal; width: 200px; text-align: center; }
+}
