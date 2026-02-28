@@ -3,6 +3,7 @@
   // Wrangler will use this to upload the files as static assets.
   "name": "walkers-toe-site",
   "compatibility_date": "2026-02-22",
+  "pages_build_output_dir": "./",
   "assets": {
     "directory": "./"
   }
