@@ -1,7 +1,7 @@
 {
   // Minimal Wrangler configuration to deploy static assets from the project root.
   // Wrangler will use this to upload the files as static assets.
-  "name": "walkers-toe-site",
+  "name": "walkerstoe",
   "compatibility_date": "2026-02-22",
   "pages_build_output_dir": "./"
 }
